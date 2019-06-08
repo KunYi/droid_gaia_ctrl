@@ -524,7 +524,7 @@ public final class GAIA {
     public static final int COMMAND_GET_DATA_ENDPOINT_MODE = 0x02AE;
 
 
-
+	public static final int GAIA_COMMAND_PLAY_PROMPT = 0x02E0;
     // -------------------------------------------------------------------
     // |                  POLLED STATUS COMMANDS 0x01nn                  |
     // -------------------------------------------------------------------

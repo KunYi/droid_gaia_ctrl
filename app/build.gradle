@@ -7,7 +7,7 @@ apply plugin: 'com.android.application'
 //noinspection GroovyMissingReturnStatement
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.3"
+    buildToolsVersion "28.0.3"
 
     def version = getVersion()
     
@@ -28,14 +28,14 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:25.3.1'
-    compile 'com.android.support:recyclerview-v7:25.3.1'
-    compile 'com.android.support:design:25.3.1'
-    compile project(':blelibrary')
-    compile project(':gaialibrary')
-    compile project(':vmupgradelibrary')
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'junit:junit:4.12'
+    api 'com.android.support:appcompat-v7:25.3.1'
+    api 'com.android.support:recyclerview-v7:25.3.1'
+    api 'com.android.support:design:25.3.1'
+    implementation project(':blelibrary')
+    implementation project(':gaialibrary')
+    implementation project(':vmupgradelibrary')
 }
 
 def getVersion() {
