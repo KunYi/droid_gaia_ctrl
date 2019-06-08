@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~ Copyright 2017 Qualcomm Technologies International, Ltd.                                      ~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="@dimen/padding_settings_horizontal"
+              android:layout_marginEnd="@dimen/padding_settings_horizontal"
+              android:layout_marginStart="@dimen/padding_settings_horizontal"
+              android:layout_marginTop="@dimen/no_margin"
+              android:gravity="center"
+              android:orientation="horizontal" >
+
+    <!-- no alert level -->
+    <Button
+        android:id="@+id/bt_level_none"
+        style="@style/AppTheme.Button.Flat"
+        android:layout_width="@dimen/no_layout_width"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/alert_level_none"/>
+
+    <!-- mid alert level -->
+    <Button
+        android:id="@+id/bt_level_mild"
+        style="@style/AppTheme.Button.Flat"
+        android:layout_width="@dimen/no_layout_width"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/alert_level_mild"/>
+
+    <!-- high alert level -->
+    <Button
+        android:id="@+id/bt_level_high"
+        style="@style/AppTheme.Button.Flat"
+        android:layout_width="@dimen/no_layout_width"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/alert_level_high"/>
+
+</LinearLayout>

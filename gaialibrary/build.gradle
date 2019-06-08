@@ -1,0 +1,91 @@
+/**************************************************************************************************
+ * Copyright 2017 Qualcomm Technologies International, Ltd.                                       *
+ **************************************************************************************************/
+
+apply plugin: 'com.android.library'
+
+//noinspection GroovyMissingReturnStatement
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.3"
+
+    def version = getVersion()
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode getVersionCode(version)
+        versionName getVersionName(version)
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt')
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+}
+
+def getVersion() {
+    def versionPropsFile = file('version.properties')
+
+    if (versionPropsFile.canRead()) {
+        def Properties versionProps = new Properties()
+        def FileInputStream file = new FileInputStream(versionPropsFile)
+        versionProps.load(file)
+        file.close()
+        return versionProps
+    } else {
+        throw new GradleException("getVersion(): could not read version.properties!")
+    }
+}
+
+/**
+ * <p>Build the version code for the application based on the version values from the version.properties file.<br/>
+ * The version code is as follows: abbbcccc where:</p>
+ * <ul>
+ *     <li>a is the VERSION_MAJOR</li>
+ *     <li>bbb is the VERSION_MINOR</li>
+ *     <li>cccc is the VERSION_REVISION</li>
+ * </ul>
+ * <p>From the documentation, the greatest value Google Play allows for versionCode is 2100000000. This lets 2099
+ * major versions before to reach the maximum.</p>
+ *
+ * @param version
+ *          The properties information coming from the version.properties file which shall contain values for the
+ *          following keys: VERSION_MAJOR, VERSION_MINOR and VERSION_REVISION.
+ *
+ * @return An integer built with the format abbbcccc from the version numbers.
+ */
+static def int getVersionCode(Properties version) {
+    def int FACTOR = 1000
+    def int code = ((version['VERSION_MAJOR'].toInteger() * FACTOR)
+            + version['VERSION_MINOR'].toInteger()) * FACTOR
+    + version['VERSION_REVISION'].toInteger()
+    return code;
+}
+
+/**
+ * <p>Build the version name for the application based on the version values from the version.properties file.<br/>
+ * The version code is as follows: "a.b.c" with:</p>
+ * <ul>
+ *     <li>a as the VERSION_MAJOR</li>
+ *     <li>b as the VERSION_MINOR</li>
+ *     <li>c as the VERSION_REVISION</li>
+ * </ul>
+ *
+ * @param version
+ *          The properties information coming from the version.properties file which shall contain values for the
+ *          following keys: VERSION_MAJOR, VERSION_MINOR and VERSION_REVISION.
+ *
+ * @return A String built with the format "a.b.c" from the version numbers.
+ */
+static def String getVersionName(Properties version) {
+    return version['VERSION_MAJOR'] + "." + version['VERSION_MINOR'] + "." + version['VERSION_REVISION'];
+}

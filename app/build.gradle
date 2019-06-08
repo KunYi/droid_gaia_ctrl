@@ -1,0 +1,88 @@
+/**************************************************************************************************
+ * Copyright 2017 Qualcomm Technologies International, Ltd.                                       *
+ **************************************************************************************************/
+
+apply plugin: 'com.android.application'
+
+//noinspection GroovyMissingReturnStatement
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.3"
+
+    def version = getVersion()
+    
+    defaultConfig {
+        applicationId 'com.qualcomm.qti.gaiacontrol'
+        minSdkVersion 23
+        targetSdkVersion 25
+        versionCode getVersionCode(version)
+        versionName getVersionName(version)
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt')
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:recyclerview-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+    compile project(':blelibrary')
+    compile project(':gaialibrary')
+    compile project(':vmupgradelibrary')
+}
+
+def getVersion() {
+    def versionPropsFile = file('version.properties')
+
+    if (versionPropsFile.canRead()) {
+        def Properties versionProps = new Properties()
+        def FileInputStream file = new FileInputStream(versionPropsFile)
+        versionProps.load(file)
+        file.close()
+        return versionProps
+    } else {
+        throw new GradleException("getVersion(): could not read version.properties!")
+    }
+}
+
+/**
+ * <p>Get the version code number from the given properties.</p>
+ *
+ * @param version
+ *          The properties information coming from the version.properties file which shall contain values for the
+ *          following key: VERSION_CODE.
+ *
+ *
+ * @return An integer get from the properties.
+ */
+static def int getVersionCode(Properties version) {
+    return version['VERSION_CODE'].toInteger()
+}
+
+/**
+ * <p>Build the version name for the application based on the version values from the version.properties file.<br/>
+ * The version code is as follows: "<code>a.b.c #d</code>" with:</p>
+ * <ul>
+ *     <li>a as the VERSION_MAJOR</li>
+ *     <li>b as the VERSION_MINOR</li>
+ *     <li>c as the VERSION_REVISION</li>
+ *     <li>d as the VERSION_BUILD</li>
+ * </ul>
+ *
+ * @param version
+ *          The properties information coming from the version.properties file which shall contain values for the
+ *          following keys: VERSION_MAJOR, VERSION_MINOR, VERSION_REVISION and VERSION_NUMBER.
+ *
+ * @return A String built using the format "a.b.c build d" from the version numbers.
+ */
+static def String getVersionName(Properties version) {
+    return version['VERSION_MAJOR'] + "." + version['VERSION_MINOR'] + "." + version['VERSION_REVISION'] +
+            " #" + version['VERSION_CODE'];
+}

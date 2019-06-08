@@ -1,0 +1,342 @@
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~ Copyright 2017 Qualcomm Technologies International, Ltd.                                      ~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            tools:context="com.qualcomm.qti.gaiacontrol.activities.UpgradeActivity">
+
+    <!-- the container of all the options -->
+    <LinearLayout
+        android:id="@+id/layout_actions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_vertical"
+        android:layout_marginEnd="@dimen/margin_horizontal"
+        android:layout_marginStart="@dimen/margin_horizontal"
+        android:layout_marginTop="@dimen/margin_vertical"
+        android:orientation="vertical">
+
+        <!-- ============== TITLE ============== -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_vertical"
+            android:layout_marginTop="@dimen/margin_vertical"
+            android:text="@string/block_gaia_upgrade_title"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/material_text_size_subhead"
+            android:textStyle="bold"/>
+
+        <!-- the message to display that the upgrade is not supported by the device -->
+        <TextView
+            android:id="@+id/tv_upgrade_not_supported"
+            style="@style/AppTheme.ListText.Secondary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:text="@string/warning_upgrade_not_supported"
+            android:textColor="@color/white"
+            android:visibility="gone"/>
+
+
+        <!-- ============== UPGRADE ACTIONS & INFORMATION ============== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_vertical"
+            android:layout_marginTop="@dimen/margin_vertical"
+            android:orientation="vertical">
+
+
+            <!-- ============== PICKING A FILE ============== -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/height_min_button">
+
+                <!-- the button to start the pick file action - should display the pick file element -->
+                <Button
+                    android:id="@+id/bt_action_pick_file"
+                    style="@style/AppTheme.Button.Flat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/no_margin"
+                    android:enabled="true"
+                    android:text="@string/button_choose"/>
+
+                <!-- the text view for the title of pick file action -->
+                <TextView
+                    android:id="@+id/tv_action_pick_file_title"
+                    style="@style/AppTheme.ListText.Primary"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/margin_horizontal"
+                    android:layout_toStartOf="@id/bt_action_pick_file"
+                    android:text="@string/title_pick_file"/>
+
+                <!-- the text view for the explanation of the pick file action -->
+                <TextView
+                    android:id="@+id/tv_action_pick_file_message"
+                    style="@style/AppTheme.ListText.Secondary"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@id/tv_action_pick_file_title"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/margin_horizontal"
+                    android:layout_toStartOf="@id/bt_action_pick_file"
+                    android:text="@string/message_pick_file_default"/>
+
+            </RelativeLayout>
+
+            <!-- ============== FILE INFORMATION ============== -->
+            <RelativeLayout
+                android:id="@+id/layout_file_information"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_vertical"
+                android:layout_marginEnd="@dimen/margin_horizontal"
+                android:layout_marginStart="@dimen/margin_horizontal"
+                android:minHeight="@dimen/height_min_button"
+                android:visibility="gone">
+
+                <!-- Name of file -->
+                <TextView
+                    android:id="@+id/tv_file_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif-medium"
+                    android:lines="1"
+                    android:textColor="@color/file_information"
+                    android:textSize="@dimen/text_size_item_title"/>
+
+                <!-- Date of last modification of the file -->
+                <TextView
+                    android:id="@+id/tv_file_last_modification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@id/tv_file_name"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif"
+                    android:lines="1"
+                    android:textColor="@color/file_information"
+                    android:textSize="@dimen/text_size_item_body"/>
+
+                <!-- Date of last modification of the file -->
+                <TextView
+                    android:id="@+id/tv_file_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@id/tv_file_name"
+                    android:layout_toEndOf="@id/tv_file_last_modification"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif"
+                    android:lines="1"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/file_information"
+                    android:textSize="@dimen/text_size_item_body"/>
+
+                <!-- Date of last modification of the file -->
+                <!-- If using "maxLines" instead of "singleLine" the application is crashing with Lollipop -->
+                <TextView
+                    android:id="@+id/tv_file_path"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@id/tv_file_last_modification"
+                    android:ellipsize="start"
+                    android:fontFamily="sans-serif"
+                    android:singleLine="true"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/file_information"
+                    android:textSize="@dimen/text_size_item_body"
+                    tools:ignore="Deprecated"/>
+
+            </RelativeLayout>
+
+
+            <!-- ============== RWCP ============== -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/height_min_button">
+
+                <Switch
+                    android:id="@+id/sw_action_rwcp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="0dp"
+                    android:checked="false"
+                    android:showText="false"/>
+
+                <ProgressBar
+                    android:id="@+id/progress_bar_rwcp"
+                    android:layout_width="@dimen/size_progressbar_upgrade_option"
+                    android:layout_height="@dimen/size_progressbar_upgrade_option"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:visibility="invisible"/>
+
+                <!-- the text view to display the title of the upgrade action -->
+                <TextView
+                    android:id="@+id/tv_action_rwcp_title"
+                    style="@style/AppTheme.ListText.Primary"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/margin_horizontal"
+                    android:layout_toStartOf="@id/sw_action_rwcp"
+                    android:text="@string/action_rwcp_title"/>
+
+                <!-- the text view to display the explanation of the upgrade action -->
+                <TextView
+                    android:id="@+id/tv_action_rwcp_message"
+                    style="@style/AppTheme.ListText.Secondary"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@id/tv_action_rwcp_title"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/margin_horizontal"
+                    android:layout_toStartOf="@id/sw_action_rwcp"
+                    android:text="@string/action_rwcp_message"/>
+
+            </RelativeLayout>
+
+
+            <!-- ============== MTU ============== -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/height_min_button">
+
+                <Switch
+                    android:id="@+id/sw_action_mtu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="0dp"
+                    android:checked="false"
+                    android:showText="false"/>
+
+                <ProgressBar
+                    android:id="@+id/progress_bar_mtu"
+                    android:layout_width="@dimen/size_progressbar_upgrade_option"
+                    android:layout_height="@dimen/size_progressbar_upgrade_option"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:visibility="invisible"/>
+
+                <!-- the text view to display the title of the upgrade action -->
+                <TextView
+                    android:id="@+id/tv_action_mtu_title"
+                    style="@style/AppTheme.ListText.Primary"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/margin_horizontal"
+                    android:layout_toStartOf="@id/sw_action_mtu"
+                    android:text="@string/action_mtu_title"/>
+
+                <!-- the text view to display the explanation of the upgrade action -->
+                <TextView
+                    android:id="@+id/tv_action_mtu_message"
+                    style="@style/AppTheme.ListText.Secondary"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@id/tv_action_mtu_title"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/margin_horizontal"
+                    android:layout_toStartOf="@id/sw_action_mtu"
+                    android:text="@string/action_mtu_message"/>
+
+            </RelativeLayout>
+
+
+            <!-- ============== ACTIVATE DEBUG LOGS ============== -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/height_min_button">
+
+                <Switch
+                    android:id="@+id/sw_action_logs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="0dp"
+                    android:checked="false"
+                    android:showText="false"/>
+
+                <!-- the text view to display the title of the upgrade action -->
+                <TextView
+                    android:id="@+id/tv_action_logs_title"
+                    style="@style/AppTheme.ListText.Primary"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/margin_horizontal"
+                    android:layout_toStartOf="@id/sw_action_logs"
+                    android:text="@string/action_logs_title"/>
+
+                <!-- the text view to display the explanation of the upgrade action -->
+                <TextView
+                    android:id="@+id/tv_action_logs_message"
+                    style="@style/AppTheme.ListText.Secondary"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@id/tv_action_logs_title"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/margin_horizontal"
+                    android:layout_toStartOf="@id/sw_action_logs"
+                    android:lines="2"
+                    android:text="@string/action_logs_message"/>
+
+            </RelativeLayout>
+
+
+            <!-- ============== UPGRADE ACTION ============== -->
+
+            <!-- the button to start the upgrade action -->
+            <Button
+                android:id="@+id/bt_action_upgrade"
+                style="@style/AppTheme.Button.Flat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:enabled="false"
+                android:text="@string/button_start_upgrade"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
