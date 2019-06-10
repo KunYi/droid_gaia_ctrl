@@ -357,7 +357,23 @@ public class MainGaiaManager extends AGaiaManager {
         createRequest(packet);
     }
 
+    public void setAlertVoice(int val) {
+        byte[] payload = { 0, 0 };
+        payload[0] = (byte)((val >> 8) & 0xFF);
+        payload[1] = (byte)(val & 0xFF);
+        GaiaPacket packet = createPacket(GAIA.COMMAND_ALERT_VOICE, payload);
+        createRequest(packet);
+    }
 
+/*
+//  for experimental
+    public void setAudioPrompt(int val) {
+        final int COMMAND_TRIG_AUDIO_PROMPT = 0x02C0;
+        byte[] payload = { 0, 0 };
+        GaiaPacket packet = createPacket(COMMAND_TRIG_AUDIO_PROMPT, payload);
+        createRequest(packet);
+    }
+*/
     // ====== PROTECTED METHODS ====================================================================
 
     @Override // extends GaiaManager
