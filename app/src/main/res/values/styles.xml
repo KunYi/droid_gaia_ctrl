@@ -18,24 +18,24 @@
         <item name="android:layout_marginBottom">@dimen/margin_button_flat_vertical</item>
         <item name="android:layout_marginStart">@dimen/margin_button_flat_horizontal</item>
         <item name="android:layout_marginEnd">@dimen/margin_button_flat_horizontal</item>
-        <item name="android:paddingStart">@dimen/padding_button_flat_horizontal</item>
-        <item name="android:paddingEnd">@dimen/padding_button_flat_horizontal</item>
+        <item name="paddingStart">@dimen/padding_button_flat_horizontal</item>
+        <item name="paddingEnd">@dimen/padding_button_flat_horizontal</item>
         <item name="android:minHeight">@dimen/height_button_flat</item>
         <item name="android:fontFamily">sans-serif-medium</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">@dimen/text_size_button</item>
-        <item name="android:textAllCaps">true</item>
+        <item name="textAllCaps">true</item>
     </style>
 
     <style name="AppTheme.Button.Flat">
-        <item name="android:background">@drawable/flat_button_background</item>
+        <item name="background">@drawable/flat_button_background</item>
         <item name="android:textColor">@drawable/flat_button_text_color</item>
-        <item name="android:elevation">@dimen/elevation_button_flat</item>
+        <item name="elevation">@dimen/elevation_button_flat</item>
         <item name="android:stateListAnimator">@animator/selector_flat_buttons</item>
     </style>
 
     <style name="AppTheme.Button.Flat.Oval">
-        <item name="android:background">@drawable/flat_button_background_oval</item>
+        <item name="background">@drawable/flat_button_background_oval</item>
     </style>
 
     <style name="AppTheme.Text">
@@ -58,13 +58,13 @@
         <item name="android:layout_margin">@dimen/margin_tiles</item>
         <item name="android:textColor">@color/text_tile</item>
         <item name="android:textSize">@dimen/text_size_tile_title</item>
-        <item name="android:elevation">@dimen/no_elevation</item>
+        <item name="elevation">@dimen/no_elevation</item>
     </style>
 
     <!-- We have to repeat the elevation here, otherwise it's not working everywhere -->
     <style name="AppTheme.Tile.Default">
         <item name="android:padding">@dimen/padding_tiles_inside</item>
-        <item name="android:elevation">@dimen/no_elevation</item>
+        <item name="elevation">@dimen/no_elevation</item>
         <item name="android:enabled">false</item>
     </style>
 
@@ -82,13 +82,13 @@
     </style>
 
     <style name="AppTheme.ImageButton">
-        <item name="android:background">?android:attr/selectableItemBackgroundBorderless</item>
+        <item name="background">?attr/selectableItemBackgroundBorderless</item>
         <item name="android:minHeight">@dimen/height_min_button</item>
     </style>
 
     <style name="AppTheme.Switch">
         <item name="android:minHeight">@dimen/height_min_button</item>
-        <item name="android:paddingStart">@dimen/padding_settings_horizontal</item>
+        <item name="paddingStart">@dimen/padding_settings_horizontal</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:textSize">@dimen/text_size_settings</item>
@@ -100,7 +100,7 @@
         <item name="android:textColor">@color/title</item>
         <item name="android:fontFamily">sans-serif-medium</item>
         <item name="android:gravity">center_vertical</item>
-        <item name="android:paddingStart">@dimen/no_padding</item>
+        <item name="paddingStart">@dimen/no_padding</item>
     </style>
 
     <style name="AppTheme.Switch.Info">
@@ -116,18 +116,18 @@
         <item name="android:layout_marginBottom">@dimen/margin_button_flat_vertical</item>
         <item name="android:layout_marginStart">@dimen/margin_button_flat_horizontal</item>
         <item name="android:layout_marginEnd">@dimen/margin_button_flat_horizontal</item>
-        <item name="android:paddingStart">@dimen/padding_button_flat_horizontal</item>
-        <item name="android:paddingEnd">@dimen/padding_button_flat_horizontal</item>
+        <item name="paddingStart">@dimen/padding_button_flat_horizontal</item>
+        <item name="paddingEnd">@dimen/padding_button_flat_horizontal</item>
         <item name="android:minHeight">@dimen/height_button_flat</item>
         <item name="android:fontFamily">sans-serif-medium</item>
         <item name="android:textSize">@dimen/text_size_button</item>
-        <item name="android:textAllCaps">true</item>
+        <item name="textAllCaps">true</item>
         <item name="android:layout_weight">1</item>
         <item name="android:textColor">@color/secondary_text</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:paddingBottom">@dimen/padding_button_vertical</item>
-        <item name="android:background">@drawable/flat_button_preset_background</item>
+        <item name="background">@drawable/flat_button_preset_background</item>
         <item name="android:stateListAnimator">@animator/selector_presets</item>
     </style>
 
@@ -138,15 +138,15 @@
     </style>
 
     <style name="AppTheme.Button.Flat.Group">
-        <item name="android:background">@drawable/flat_button_selected_background</item>
+        <item name="background">@drawable/flat_button_selected_background</item>
         <item name="android:textColor">@drawable/flat_button_selected_text_color</item>
-        <item name="android:elevation">@dimen/elevation_button_flat</item>
+        <item name="elevation">@dimen/elevation_button_flat</item>
         <item name="android:fontFamily">sans-serif</item>
         <item name="android:stateListAnimator">@animator/selector_flat_buttons</item>
     </style>
 
     <style name="AppTheme.Button.Flat.White">
-        <item name="android:background">@drawable/flat_button_background_white</item>
+        <item name="background">@drawable/flat_button_background_white</item>
         <item name="android:textColor">@drawable/flat_button_text_color_white</item>
     </style>
 

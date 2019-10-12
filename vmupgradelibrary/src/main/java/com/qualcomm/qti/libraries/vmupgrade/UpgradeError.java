@@ -5,8 +5,8 @@
 package com.qualcomm.qti.libraries.vmupgrade;
 
 import android.annotation.SuppressLint;
-import android.support.annotation.IntDef;
-import android.support.annotation.IntRange;
+import androidx.annotation.IntDef;
+import androidx.annotation.IntRange;
 
 import com.qualcomm.qti.libraries.vmupgrade.codes.ReturnCodes;
 import com.qualcomm.qti.libraries.vmupgrade.packet.VMUException;

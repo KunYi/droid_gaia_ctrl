@@ -13,7 +13,7 @@
     android:paddingStart="@dimen/padding_list_item_horizontal"
     android:paddingEnd="@dimen/padding_list_item_horizontal"
     android:paddingTop="@dimen/padding_list_item_vertical"
-    android:background="?android:attr/selectableItemBackground">
+    android:background="?attr/selectableItemBackground">
 
     <!-- Name of device information -->
     <TextView

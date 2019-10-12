@@ -3,7 +3,7 @@
   ~ Copyright 2017 Qualcomm Technologies International, Ltd.                                      ~
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -14,4 +14,4 @@
     android:elevation="@dimen/elevation_toolbar"
     tools:ignore="Overdraw">
 
-</android.support.v7.widget.Toolbar>
+</androidx.appcompat.widget.Toolbar>

@@ -6,7 +6,7 @@
 package com.qualcomm.qti.gaiacontrol.gaia;
 
 import android.annotation.SuppressLint;
-import android.support.annotation.IntDef;
+import androidx.annotation.IntDef;
 
 import com.qualcomm.qti.gaiacontrol.Consts;
 import com.qualcomm.qti.libraries.gaia.GAIA;

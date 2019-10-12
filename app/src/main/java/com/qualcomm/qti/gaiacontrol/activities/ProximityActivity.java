@@ -8,7 +8,7 @@ import android.annotation.SuppressLint;
 import android.bluetooth.BluetoothDevice;
 import android.os.Bundle;
 import android.os.Message;
-import android.support.v7.widget.Toolbar;
+import androidx.appcompat.widget.Toolbar;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;

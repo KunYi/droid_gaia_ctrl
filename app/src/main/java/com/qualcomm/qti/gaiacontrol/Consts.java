@@ -4,9 +4,9 @@
 
 package com.qualcomm.qti.gaiacontrol;
 
-import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.content.Intent;
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * <p>This final class encapsulates all useful general constants for the application.</p>
@@ -14,16 +14,16 @@ import android.content.Intent;
 public final class Consts {
 
     /**
-     * The code to use for the methods {@link Activity#onActivityResult(int, int, Intent) onActivityResult}
-     * and {@link Activity#startActivityForResult(Intent, int) startActivityForResult} when requesting to enable
+     * The code to use for the methods {@link AppCompatActivity#onActivityResult(int, int, Intent) onActivityResult}
+     * and {@link AppCompatActivity#startActivityForResult(Intent, int) startActivityForResult} when requesting to enable
      * the device Bluetooth.
      */
     public static final int ACTION_REQUEST_ENABLE_BLUETOOTH = 101;
 
     /**
-     * The code to use for the methods {@link Activity#onRequestPermissionsResult(int, String[], int[])}
+     * The code to use for the methods {@link AppCompatActivity#onRequestPermissionsResult(int, String[], int[])}
      * onRequestPermissionsResult} and
-     * {@link android.support.v4.app.ActivityCompat#requestPermissions(Activity, String[], int) requestPermissions}
+     * {@link androidx.core.app.ActivityCompat#requestPermissions(AppCompatActivity, String[], int) requestPermissions}
      * when requesting to the user to enable needed permissions.
      */
     public static final int ACTION_REQUEST_PERMISSIONS = 102;

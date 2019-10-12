@@ -7,10 +7,10 @@ import android.annotation.SuppressLint;
 import android.bluetooth.BluetoothDevice;
 import android.os.Bundle;
 import android.os.Message;
-import android.support.annotation.IntDef;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
+import androidx.annotation.IntDef;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.appcompat.widget.Toolbar;
 import android.util.Log;
 
 import com.qualcomm.qti.gaiacontrol.R;

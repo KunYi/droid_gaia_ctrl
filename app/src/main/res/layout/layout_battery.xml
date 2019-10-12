@@ -4,7 +4,8 @@
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:gravity="center" >
@@ -20,7 +21,7 @@
         android:id="@+id/iv_battery_level"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_battery_level_unknown_128dp"
+        app:srcCompat="@drawable/ic_battery_level_unknown_128dp"
         android:tint="@color/image_battery_level"
         android:contentDescription="@string/empty_content_description" />
 

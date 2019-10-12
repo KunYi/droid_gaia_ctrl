@@ -7,8 +7,8 @@ package com.qualcomm.qti.gaiacontrol.gaia;
 
 import android.annotation.SuppressLint;
 import android.os.Handler;
-import android.support.annotation.IntDef;
-import android.support.v4.util.ArrayMap;
+import androidx.annotation.IntDef;
+import androidx.collection.ArrayMap;
 import android.util.Log;
 
 import com.qualcomm.qti.gaiacontrol.Consts;

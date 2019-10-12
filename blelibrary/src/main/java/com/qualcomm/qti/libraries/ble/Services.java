@@ -4,7 +4,7 @@
 
 package com.qualcomm.qti.libraries.ble;
 
-import android.support.v4.util.ArrayMap;
+import androidx.collection.ArrayMap;
 
 import java.util.UUID;
 

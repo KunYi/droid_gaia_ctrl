@@ -7,8 +7,8 @@ package com.qualcomm.qti.gaiacontrol.services;
 import android.annotation.SuppressLint;
 import android.bluetooth.BluetoothDevice;
 import android.os.Handler;
-import android.support.annotation.IntDef;
-import android.support.annotation.IntRange;
+import androidx.annotation.IntDef;
+import androidx.annotation.IntRange;
 
 import com.qualcomm.qti.gaiacontrol.models.gatt.GATT;
 import com.qualcomm.qti.gaiacontrol.models.gatt.GATTServices;

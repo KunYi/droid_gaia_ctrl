@@ -8,7 +8,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
 import android.annotation.SuppressLint;
-import android.support.annotation.IntDef;
+import androidx.annotation.IntDef;
 
 /**
  * <p>A GaiaException is thrown when a problem occurs with the GAIA protocol.</p>

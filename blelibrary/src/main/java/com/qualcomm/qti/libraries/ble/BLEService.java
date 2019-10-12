@@ -18,7 +18,7 @@ import android.bluetooth.BluetoothProfile;
 import android.content.Context;
 import android.os.Build;
 import android.os.Handler;
-import android.support.annotation.IntDef;
+import androidx.annotation.IntDef;
 import android.util.ArrayMap;
 import android.util.Log;
 

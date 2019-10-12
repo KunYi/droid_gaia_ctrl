@@ -4,6 +4,7 @@
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:gravity="center"
     android:layout_width="match_parent"
     android:layout_height="wrap_content" >
@@ -19,7 +20,7 @@
         android:paddingLeft="@dimen/padding_remote_big"
         android:paddingTop="@dimen/padding_remote_small"
         android:paddingBottom="@dimen/padding_remote_small"
-        android:src="@drawable/ic_pause_48dp"
+        app:srcCompat="@drawable/ic_pause_48dp"
         android:layout_above="@+id/ll_rewind_play_forward"
         android:layout_centerInParent="true"
         android:tint="@color/button_remote_image"/>
@@ -39,7 +40,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/remote_left_button"
             android:contentDescription="@string/empty_content_description"
-            android:src="@drawable/ic_rewind_48dp"
+            app:srcCompat="@drawable/ic_rewind_48dp"
             android:paddingRight="@dimen/padding_remote_small"
             android:paddingLeft="@dimen/padding_remote_small"
             android:paddingTop="@dimen/padding_remote_big"
@@ -53,7 +54,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/remote_rounded_rectangle_button"
             android:contentDescription="@string/empty_content_description"
-            android:src="@drawable/ic_play_48dp"
+            app:srcCompat="@drawable/ic_play_48dp"
             android:paddingRight="@dimen/padding_remote_big"
             android:paddingLeft="@dimen/padding_remote_big"
             android:paddingTop="@dimen/padding_remote_big"
@@ -67,7 +68,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/remote_right_button"
             android:contentDescription="@string/empty_content_description"
-            android:src="@drawable/ic_forward_48dp"
+            app:srcCompat="@drawable/ic_forward_48dp"
             android:paddingRight="@dimen/padding_remote_small"
             android:paddingLeft="@dimen/padding_remote_small"
             android:paddingTop="@dimen/padding_remote_big"
@@ -88,7 +89,7 @@
         android:paddingLeft="@dimen/padding_remote_big"
         android:paddingTop="@dimen/padding_remote_small"
         android:paddingBottom="@dimen/padding_remote_small"
-        android:src="@drawable/ic_stop_48dp"
+        app:srcCompat="@drawable/ic_stop_48dp"
         android:tint="@color/button_remote_image" />
 
 </RelativeLayout>

@@ -6,7 +6,7 @@ apply plugin: 'com.android.library'
 
 //noinspection GroovyMissingReturnStatement
 android {
-    compileSdkVersion 25
+    compileSdkVersion 28
     buildToolsVersion "29.0.2"
 
     def version = getVersion()
@@ -27,7 +27,7 @@ android {
 }
 
 dependencies {
-    api 'com.android.support:appcompat-v7:25.4.0'
+    api 'androidx.appcompat:appcompat:1.0.0'
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     testImplementation 'junit:junit:4.12'
 }

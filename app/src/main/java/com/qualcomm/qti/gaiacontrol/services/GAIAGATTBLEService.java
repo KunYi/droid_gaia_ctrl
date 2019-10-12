@@ -15,8 +15,8 @@ import android.content.IntentFilter;
 import android.os.Binder;
 import android.os.Handler;
 import android.os.IBinder;
-import android.support.annotation.IntDef;
-import android.support.annotation.IntRange;
+import androidx.annotation.IntDef;
+import androidx.annotation.IntRange;
 import android.util.Log;
 
 import com.qualcomm.qti.gaiacontrol.Consts;

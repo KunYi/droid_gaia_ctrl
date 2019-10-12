@@ -10,8 +10,8 @@ import android.bluetooth.BluetoothManager;
 import android.bluetooth.BluetoothSocket;
 import android.os.Build;
 import android.os.ParcelUuid;
-import android.support.annotation.IntDef;
-import android.support.annotation.NonNull;
+import androidx.annotation.IntDef;
+import androidx.annotation.NonNull;
 import android.util.Log;
 
 import com.qualcomm.qti.gaiacontrol.Utils;

@@ -4,6 +4,7 @@
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:gravity="center" android:layout_width="match_parent"
     android:layout_height="wrap_content" >
 
@@ -26,7 +27,7 @@
             android:paddingLeft="@dimen/padding_remote_big"
             android:paddingTop="@dimen/padding_remote_big"
             android:paddingBottom="@dimen/padding_remote_big"
-            android:src="@drawable/ic_volume_up_48dp"
+            app:srcCompat="@drawable/ic_volume_up_48dp"
             android:tint="@color/button_remote_image" />
 
         <ImageButton
@@ -40,7 +41,7 @@
             android:paddingLeft="@dimen/padding_remote_big"
             android:paddingTop="@dimen/padding_remote_big"
             android:paddingBottom="@dimen/padding_remote_big"
-            android:src="@drawable/ic_volume_down_48dp"
+            app:srcCompat="@drawable/ic_volume_down_48dp"
             android:tint="@color/button_remote_image" />
     </LinearLayout>
 
@@ -57,7 +58,7 @@
         android:paddingLeft="@dimen/padding_remote_small"
         android:paddingTop="@dimen/padding_remote_small"
         android:paddingBottom="@dimen/padding_remote_small"
-        android:src="@drawable/ic_mute_48dp"
+        app:srcCompat="@drawable/ic_mute_48dp"
         android:tint="@color/button_remote_image" />
 
 </RelativeLayout>

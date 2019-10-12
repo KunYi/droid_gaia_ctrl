@@ -7,7 +7,7 @@ package com.qualcomm.qti.libraries.gaia.requests;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-import android.support.annotation.IntDef;
+import androidx.annotation.IntDef;
 
 import com.qualcomm.qti.libraries.gaia.packets.GaiaPacket;
 

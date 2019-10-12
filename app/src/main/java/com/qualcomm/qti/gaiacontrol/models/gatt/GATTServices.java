@@ -5,7 +5,7 @@
 package com.qualcomm.qti.gaiacontrol.models.gatt;
 
 import android.bluetooth.BluetoothGattService;
-import android.support.v4.util.SimpleArrayMap;
+import androidx.collection.SimpleArrayMap;
 
 import java.util.List;
 

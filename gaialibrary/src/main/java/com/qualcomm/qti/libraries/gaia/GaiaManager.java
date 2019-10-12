@@ -5,8 +5,8 @@
 package com.qualcomm.qti.libraries.gaia;
 
 import android.os.Handler;
-import android.support.annotation.Nullable;
-import android.support.v4.util.ArrayMap;
+import androidx.annotation.Nullable;
+import androidx.collection.ArrayMap;
 import android.util.Log;
 
 import com.qualcomm.qti.libraries.gaia.packets.GaiaPacket;

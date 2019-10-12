@@ -4,6 +4,7 @@
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/ll_fragment"
     android:layout_width="match_parent"
@@ -34,7 +35,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/empty_content_description"
-            android:src="@drawable/ic_speaker_left_grey_100dp"
+            app:srcCompat="@drawable/ic_speaker_left_grey_100dp"
             android:paddingEnd="@dimen/no_padding"
             tools:ignore="RtlSymmetry" />
 
@@ -43,7 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/empty_content_description"
-            android:src="@drawable/ic_speaker_right_grey_100dp"
+            app:srcCompat="@drawable/ic_speaker_right_grey_100dp"
             android:paddingStart="@dimen/no_padding"
             tools:ignore="RtlSymmetry"/>
 
@@ -63,7 +64,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/empty_content_description"
-            android:src="@drawable/ic_arrow_left_18dp"
+            app:srcCompat="@drawable/ic_arrow_left_18dp"
             style="@style/AppTheme.ImageButton"
             />
 
@@ -80,7 +81,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/empty_content_description"
-            android:src="@drawable/ic_arrow_right_18dp"
+            app:srcCompat="@drawable/ic_arrow_right_18dp"
             style="@style/AppTheme.ImageButton" />
 
     </LinearLayout>
@@ -98,7 +99,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/empty_content_description"
-            android:src="@drawable/ic_volume_40dp" />
+            app:srcCompat="@drawable/ic_volume_40dp" />
 
         <SeekBar
             android:id="@+id/sb_volume"

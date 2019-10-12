@@ -6,7 +6,7 @@ package com.qualcomm.qti.gaiacontrol.ui.holders;
 
 import android.bluetooth.BluetoothDevice;
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.TextView;

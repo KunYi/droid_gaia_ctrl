@@ -4,6 +4,7 @@
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:background="@drawable/tile_device"
@@ -15,7 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
-        android:src="@drawable/ic_info_18dp"
+        app:srcCompat="@drawable/ic_info_18dp"
         android:contentDescription="@string/empty_content_description" />
 
     <ImageView
@@ -24,7 +25,7 @@
         android:layout_alignParentBottom="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_battery_unknown_32dp"
+        app:srcCompat="@drawable/ic_battery_unknown_32dp"
         android:tint="@color/white"
         android:contentDescription="@string/empty_content_description"
         android:visibility="gone" />

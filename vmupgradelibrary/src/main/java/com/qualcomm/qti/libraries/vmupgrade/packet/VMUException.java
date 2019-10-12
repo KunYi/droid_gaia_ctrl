@@ -5,7 +5,7 @@
 package com.qualcomm.qti.libraries.vmupgrade.packet;
 
 import android.annotation.SuppressLint;
-import android.support.annotation.IntDef;
+import androidx.annotation.IntDef;
 
 import com.qualcomm.qti.libraries.vmupgrade.VMUUtils;
 

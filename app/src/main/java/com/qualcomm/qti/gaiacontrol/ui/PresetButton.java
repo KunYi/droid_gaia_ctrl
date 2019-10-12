@@ -14,7 +14,7 @@ import com.qualcomm.qti.gaiacontrol.gaia.EqualizerGaiaManager;
  * To personalize buttons depending on their state & their properties to display pre-sets buttons for the equalizer
  * feature.
  */
-public class PresetButton extends android.support.v7.widget.AppCompatButton {
+public class PresetButton extends androidx.appcompat.widget.AppCompatButton {
 
     /**
      * The drawable to use when the button is selected.
